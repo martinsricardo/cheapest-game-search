@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    img(src="https://www.allkeyshop.com/img/minecraft_catalog.jpg")
+    h1="Search a game"
+    form(action="/scr", method="POST")
+        input(type="text", id="game", name="game", placeholder="Type your keywords here:", value="")
+        button(type="submit") Submit
+        p #{loading}
+    if gameName
+        p Search results for #{gameName}
+    if searchList
+        ul
+            for game in searchList
+                div(style="align-content:center")
+                    li
+                        img(class="game-logo" src=game.logo)
+                        p(class="game-info") #{game.name} - #{game.price}

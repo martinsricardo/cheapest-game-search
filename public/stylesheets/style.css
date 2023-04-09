@@ -1,0 +1,19 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+li{
+  display:flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+.game-logo,.game-info{
+  padding:0.5rem;
+}
+
+
